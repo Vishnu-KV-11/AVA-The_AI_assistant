@@ -4,7 +4,7 @@ import streamlit as st
 # Define the main function
 def main():
   # Set the title of the app
-  st.title("Welcome to My Streamlit App!")
+  st.title("Welcome to !")
 
   # Display a welcome message
   st.write("Hello, welcome to my Streamlit app!")

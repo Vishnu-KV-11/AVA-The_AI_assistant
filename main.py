@@ -9,6 +9,21 @@ import distutils
 import pyttsx3
 import openai
 
+import openai
+
+
+def ai(prompt):
+    openai.api_key = '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'
+    messages = [{"role": "system", "content": "You are a intelligent assistant."}]
+
+    message = prompt
+    if message:
+        messages.append({"role": "user", "content": message})
+        chat = openai.ChatCompletion.create(model="gpt-3.5-turbo", messages=messages)
+        reply = chat.choices[0].message.content
+        print(f"ChatGPT: {reply}")
+        messages.append({"role": "assistant", "content": reply})
+    return reply
 
 
 speaker= win32com.client.Dispatch("SAPI.SpVoice")
@@ -48,6 +63,11 @@ if __name__ == '__main__':
         if "the time" in query:
             strftime=datetime.datetime.now().strftime("%H:%M:%S")
             say(f"The time is {strftime}")
-        if "using artificial intelligence" in query:
-            say("ai called but ai didnt speak")
-            say("what is ai")
+        elif "using artificial intelligence" in query:
+            ai(prompt=query)
+        else:
+            print("chatting")
+            reply=ai(query)
+            say(reply)
+
+

@@ -5,3 +5,4 @@ def speak(text):
     engine.setProperty('rate', rate-70)
     engine.say(text)
     engine.runAndWait()
+##

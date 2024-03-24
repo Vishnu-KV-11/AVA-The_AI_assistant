@@ -48,3 +48,6 @@ if __name__ == '__main__':
         if "the time" in query:
             strftime=datetime.datetime.now().strftime("%H:%M:%S")
             say(f"The time is {strftime}")
+        if "using artificial intelligence" in query:
+            say("ai called but ai didnt speak")
+            ##

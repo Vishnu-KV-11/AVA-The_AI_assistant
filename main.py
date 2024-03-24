@@ -50,4 +50,4 @@ if __name__ == '__main__':
             say(f"The time is {strftime}")
         if "using artificial intelligence" in query:
             say("ai called but ai didnt speak")
-            ##
+            say("what is ai")

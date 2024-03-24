@@ -8,12 +8,12 @@ from win32com.client import Dispatch
 import distutils
 import pyttsx3
 import openai
-
+from config import apikey
 import openai
 
 
 def ai(prompt):
-    openai.api_key = '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'
+    openai.api_key = apikey
     messages = [{"role": "system", "content": "You are a intelligent assistant."}]
 
     message = prompt
